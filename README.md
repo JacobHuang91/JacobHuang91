@@ -1,8 +1,8 @@
 <div align="center">
 
-# Hi there, I'm Xinghao Huang 👋
+# Hi there, I'm Jacob 👋
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=24&pause=1000&color=2E9EF7&center=true&vCenter=true&width=600&lines=Software+Engineer+%40+Twilio;AI+%26+Full-Stack+Developer;Building+Scalable+Systems;Passionate+About+Technology)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=24&pause=1000&color=2E9EF7&center=true&vCenter=true&width=600&lines=Senior+Software+Engineer+%40+Twilio;AI+%26+Full-Stack+Developer;Building+Scalable+Systems;Passionate+About+Technology)](https://git.io/typing-svg)
 
 </div>
 
@@ -10,42 +10,46 @@
 
 ## 🚀 About Me
 
-I'm a **Software Engineer at Twilio**, working on cutting-edge **AI Assistants** technology. With a strong background in building scalable, production-grade systems, I'm passionate about creating innovative solutions that make a real impact.
+I'm a **Senior Software Engineer at Twilio**, working on cutting-edge **AI Assistants** technology. With a strong background in building scalable, production-grade systems, I'm passionate about creating innovative solutions that make a real impact.
 
 - 🔭 Currently working on **AI Assistants** at Twilio
 - 🌟 Previously built **Twilio Engage** features at Segment, including mobile push notifications and analytics
 - 💡 Experienced in full-stack development, distributed systems, and customer engagement platforms
 - 🎯 Focused on delivering high-quality, maintainable code
-- 📫 Reach me at: **jacobhuang91@gmail.com**
 
 ---
 
 ## 💼 Professional Experience
 
-### 🏢 **Software Engineer** @ [Twilio](https://www.twilio.com)
+### 🏢 **Senior Software Engineer** @ [Twilio](https://www.twilio.com)
 `Current`
 
-Building next-generation **AI Assistants** platform
-- Developing conversational AI capabilities
-- Architecting scalable backend systems
-- Integrating AI/ML models into production
+Building next-generation **[AI Assistants](https://www.twilio.com/docs/alpha/ai-assistants)** platform
+- 🤖 Developing conversational AI capabilities powered by large language models
+- 🏗️ Architecting scalable backend systems to handle real-time AI interactions
+- 🔌 Integrating AI/ML models into production with low-latency requirements
+- ⚡ Building APIs and SDKs for seamless integration with Twilio's communication platform
+- 🎯 Optimizing performance and reliability for enterprise-grade AI solutions
 
 ### 🏢 **Software Engineer** @ [Segment (Twilio)](https://segment.com)
 `Previous Role`
 
-Contributed to **Twilio Engage** - a leading customer engagement platform
-- 📱 Built mobile push notification features
-- 📊 Developed analytics and data visualization tools
-- 🏗️ Architected organization and permission systems
-- ⚡ Optimized performance for high-throughput data processing
+Contributed to **[Twilio Engage](https://segment.com/docs/engage/)** - a leading customer engagement platform
+- 📱 Built **[Mobile Push Notifications](https://segment.com/docs/engage/content/mobile-push/)** features enabling personalized messaging campaigns across iOS and Android platforms
+- 📊 Developed **[Analytics](https://segment.com/docs/engage/analytics/)** and data visualization tools to help businesses track campaign performance and user engagement metrics
+- 🏗️ Architected **[Organization and Permission Systems](https://segment.com/docs/engage/content/organization/)** to manage multi-team workspaces with role-based access control
+- ⚡ Optimized performance for high-throughput data processing, handling millions of events per second
+- 🔧 Implemented features for audience segmentation, journey orchestration, and real-time personalization
 
 ### 🏢 **Software Engineer** @ [BrightEdge](https://www.brightedge.com)
 `Previous Role`
 
-Worked on **Autopilot** - an AI-powered SEO platform
-- 🤖 Implemented intelligent automation features
-- 🔧 Built tools for content optimization
-- 📈 Enhanced platform scalability and reliability
+Worked on **[Autopilot](https://www.brightedge.com/products/autopilot)** - an AI-powered SEO platform
+- 🤖 Implemented intelligent automation features for AI-driven content recommendations and SEO optimization workflows
+- 🔧 Built tools for content optimization enabling marketers to improve organic search performance and rankings
+- 📊 Developed data processing pipelines to analyze website performance metrics and competitor insights
+- 🏗️ Enhanced platform scalability and reliability to support enterprise-level SEO operations
+- ⚡ Integrated machine learning models for predictive analytics and automated decision-making in digital marketing
 
 ---
 
@@ -93,20 +97,6 @@ Worked on **Autopilot** - an AI-powered SEO platform
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![Xinghao's GitHub stats](https://github-readme-stats.vercel.app/api?username=JacobHuang91&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=2E9EF7&icon_color=2E9EF7&text_color=C9D1D9)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JacobHuang91&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=2E9EF7&text_color=C9D1D9)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=JacobHuang91&theme=tokyonight&hide_border=true&background=0D1117&ring=2E9EF7&fire=2E9EF7&currStreakLabel=2E9EF7)
-
-</div>
-
----
-
 ## 🏆 Highlights
 
 - 💻 Building production-grade AI systems at Twilio
@@ -114,18 +104,6 @@ Worked on **Autopilot** - an AI-powered SEO platform
 - 📱 Developed mobile engagement features serving millions of users
 - 🔧 Experience with high-scale distributed systems
 - 🌟 Passionate about clean code, system design, and best practices
-
----
-
-## 🌐 Connect with Me
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/xinghaohuang91)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jacobhuang91@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JacobHuang91)
-
-</div>
 
 ---
 
