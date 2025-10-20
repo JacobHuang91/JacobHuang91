@@ -97,6 +97,62 @@ Worked on **[Autopilot](https://www.brightedge.com/products/autopilot)** - an AI
 
 ---
 
+## 📜 Certifications
+
+### AI & Machine Learning
+- **[Fine-Tune & Deploy LLMs with QLoRA on Sagemaker + Streamlit](https://www.udemy.com/certificate/UC-9b8ce4e2-e214-449f-a7c6-9c42a45d7b9d/)** - Udemy (Oct 2025)
+  - Skills: Large Language Models (LLM), AWS SageMaker, PyTorch, TensorFlow
+- **[The Complete Agentic AI Engineering Course (2025)](https://www.udemy.com/certificate/UC-f55b247b-073a-47d2-9533-b053ce872275/)** - Udemy (Oct 2025)
+  - Skills: Large Language Models (LLM), Agents, OpenAI API, Python
+- **[LLMs with Google Cloud and Python](https://www.ude.my/UC-fc626874-68fc-4c71-8573-288db04f3db8)** - Udemy (Dec 2023)
+  - Skills: Large Language Models (LLM), Python, Google Cloud Platform (GCP), Pandas, Jupyter
+
+### Web Development
+- **[Next.js 14 & React - The Complete Guide](https://www.udemy.com/certificate/UC-40e80699-d1d9-4b00-8005-7ea52ffdc3fa/)** - Udemy (Jan 2024)
+  - Skills: React.js, Next.js, CSS, JavaScript, HTML, MongoDB
+- **[CSS - The Complete Guide 2024](https://www.udemy.com/certificate/UC-ba86f87f-7126-4724-8d03-8e3ea5de827c/)** - Udemy (Mar 2023)
+  - Skills: SASS, CSS, Cascading Style Sheets, Web Applications
+- **[GraphQL with React: The Complete Developers Guide](https://www.udemy.com/certificate/UC-d7b4cb80-29ea-447c-8d6b-de51c71602a6/)** - Udemy (Jan 2022)
+  - Skills: GraphQL
+
+### Backend & Infrastructure
+- **[Complete Guide to Protocol Buffers 3 [Java, Golang, Python]](https://www.udemy.com/certificate/UC-fa373457-32a5-4498-b28c-4031ffe0b210/)** - Udemy (Aug 2024)
+  - Skills: Protocol Buffers
+- **[Pydantic V2: Essentials](https://www.udemy.com/certificate/UC-8f45a847-e70a-4b6f-91d2-1fc138107d74/)** - Udemy (Jul 2024)
+- **[Go Design Patterns](https://www.linkedin.com/learning/certificates/7c982a5230fb1b565c1436a92783c89e93eac739b2d9e8e9fb264a9d70396696)** - LinkedIn (Apr 2022)
+  - Skills: Go (Programming Language)
+- **[Learning the Go Standard Library](https://www.linkedin.com/learning/certificates/9db0c8255295b06c2fef1801bfd48d9edce3b26f9d370abdd40bc96f291bff1b)** - LinkedIn (Apr 2022)
+  - Skills: Go (Programming Language)
+
+### DevOps & Tools
+- **[Learn DevOps: Infrastructure Automation With Terraform](https://www.udemy.com/certificate/UC-5bfa5342-39fc-4dc4-8cf4-a1a6876c973b/)** - Udemy (Apr 2023)
+  - Skills: Terraform, Amazon Web Services (AWS)
+- **[Datadog: Performance monitoring tool (from Zero to Hero)](https://www.udemy.com/certificate/UC-38fa5fd8-bafa-447c-a7ce-bce1f7deec58/)** - Udemy (May 2022)
+  - Skills: Datadog
+- **[Git & GitHub - The Practical Guide](https://ude.my/UC-16ae9d32-5e42-433f-875f-83171ed40b30)** - Udemy (Jun 2023)
+- **[YAML Zero to Master](https://www.udemy.com/certificate/UC-5babb328-73db-436a-957e-4d218adfcb5f/)** - Udemy (Mar 2023)
+  - Skills: YAML, Terraform
+
+---
+
+## 📚 Publications
+
+### Neuroscience & Machine Learning Research
+
+1. **[Detecting Community Structure Based on Optimized Modularity by Genetic Algorithm in Resting-State fMRI](https://link.springer.com/chapter/10.1007/978-3-319-59081-3_53)**
+   - *Springer, Cham* - May 2017
+   - Research on detecting community structure of brain networks using rs-fMRI data to determine differences between autism spectrum disorders (ASDs) and normal controls. Proposes GAcut method using genetic algorithm to automatically detect community structure based on optimized modularity Q.
+
+2. **[Uncovering Community Structure in Neuronal Functional Networks from Multi-neuronal Spike Trains](https://link.springer.com/chapter/10.1007/978-981-10-0207-6_104)**
+   - *Springer, Singapore* - January 2016
+   - Proposes a neuronal functional network community structure detection method using random walk distance and spectral decomposition to automatically determine the number and structure of neuronal functional networks.
+
+3. **[Partitioning the Firing Patterns of Spike Trains by Community Modularity](https://mindmodeling.org/cogsci2015/papers/0251/paper0251.pdf)**
+   - *CogSci 2015* - July 2015
+   - Novel approach to analyze groups of firing patterns of neuronal spike trains based on community structure partitioning and modularity function Q, enabling automatic identification of optimal number of groups in neuronal firing patterns.
+
+---
+
 ## 🏆 Highlights
 
 - 💻 Building production-grade AI systems at Twilio
