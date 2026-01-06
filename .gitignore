@@ -52,5 +52,104 @@ logs/
 .env.local
 .env.*.local
 
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+*.iml
+.gradle/
+build/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# JavaScript/TypeScript
+*.tsbuildinfo
+.npm
+.eslintcache
+.next/
+out/
+.nuxt
+dist/
+.cache/
+
+# Test Coverage
+coverage/
+*.lcov
+.nyc_output
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Secrets & Credentials
+*.pem
+*.key
+*.cert
+*.p12
+.aws/
+credentials
+secrets.yml
+secrets.yaml
+config/secrets.yml
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# JetBrains
+.idea/
+*.iws
+out/
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
 # Claude Code
 .claude/
