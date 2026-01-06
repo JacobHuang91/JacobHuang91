@@ -1,11 +1,14 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, MongoClientOptions } from 'mongodb';
+import { attachDatabasePool } from '@vercel/functions';
 
 if (!process.env.MONGODB_URI) {
-  throw new Error('Please add your Mongo URI to .env.local');
+  throw new Error('Please add MONGODB_URI to your environment variables');
 }
 
 const uri = process.env.MONGODB_URI;
-const options = {};
+const options: MongoClientOptions = {
+  maxIdleTimeMS: 5000,
+};
 
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
@@ -23,8 +26,9 @@ if (process.env.NODE_ENV === 'development') {
   }
   clientPromise = globalWithMongo._mongoClientPromise;
 } else {
-  // In production mode, it's best to not use a global variable.
+  // In production mode (Vercel), use attachDatabasePool for proper cleanup
   client = new MongoClient(uri, options);
+  attachDatabasePool(client);
   clientPromise = client.connect();
 }
 
