@@ -171,8 +171,6 @@ Worked on **[Autopilot](https://www.brightedge.com/products/autopilot)** - an AI
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JacobHuang91&layout=compact&theme=tokyonight&hide_border=true)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=JacobHuang91&theme=tokyonight&hide_border=true)
-
 </div>
 
 ---
