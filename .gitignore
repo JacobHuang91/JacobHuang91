@@ -153,3 +153,8 @@ out/
 
 # Claude Code
 .claude/
+
+# Personal Information
+resume.md
+resume.pdf
+resume.html
