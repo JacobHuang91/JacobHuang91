@@ -2,7 +2,7 @@
 
 > My personal knowledge base - built with Claude
 
-**Last Updated:** 2026-01-05
+**Last Updated:** 2026-06-03
 
 ---
 
@@ -108,112 +108,17 @@ Pattern: Sliding Window
 
 ### Knowledge Card Template (Low-Frequency Knowledge)
 
-The Learning Cards app (in `/learning`) implements this methodology with markdown-based cards.
+Document concepts directly in this file under the "Concepts & Patterns" section.
 
-**Card Structure:**
-```markdown
----
-id: concept-name
-title: Concept Name
-emoji: 🦆
-category: Python / Type System
-type: low-frequency
----
+**Suggested structure (adapt as needed):**
 
-# Concept Name
+- **One-Line Essence**: Core idea in one sentence
+- **Use When / Trigger Scenarios**: For tools, patterns, techniques
+- **Example / Code**: Concrete demonstrations
+- **Common Pitfalls**: When relevant to avoid mistakes
+- **Related Concepts**: Helpful for connecting ideas
 
-## One-Line Essence
-
-> The key concept in one sentence
-
-## Use When
-
-Trigger scenario that tells you when to apply this
-
-## Typical Cases
-
-- Concrete example 1
-- Concrete example 2
-- Real-world use case
-
-## Example
-
-​```python
-# Code example with syntax highlighting
-​```
-
-## Risks
-
-Common pitfalls and limitations
-
-## When NOT to Use
-
-Counter-indicators for when to avoid this approach
-
-## Related Concepts
-
-- Related concept 1
-- Related concept 2
-```
-
----
-
-### Spaced Repetition Schedule
-
-**Implemented in the Learning Cards App** (`/learning`)
-
-**Critical Window:** Review new cards immediately, then space out reviews
-
-**Review Intervals (Automated):**
-- **Day 0**: Initial learning → Review immediately
-- **After 1st review**: Next review in 2-3 days
-- **After 2nd review**: Week 1
-- **After 3rd review**: Week 2
-- **After 4th+ review**: Monthly maintenance
-
-**How it works:**
-- New cards appear in "Review Now" 🔥 section immediately
-- After marking as reviewed, card is scheduled for next interval
-- Overdue cards are highlighted with fire badge
-- Progress stored in MongoDB, content in markdown (version controlled)
-
-**Creating new cards:**
-Use Claude Code to create new learning cards by asking:
-- "Add a new learning card about [concept]"
-- "Create a card explaining [topic]"
-- Claude will generate the markdown file with proper structure
-
----
-
-## Learning Cards App
-
-**Location:** `/learning`
-
-A Next.js application implementing the spaced repetition methodology described above.
-
-### Features
-- 🔥 **Review Now**: Shows cards due for review based on spaced repetition
-- 📚 **All Cards**: Browse all cards with category filtering
-- 💻 **Syntax Highlighting**: Code examples with VS Code Dark+ theme
-- 📱 **Responsive Design**: Mobile-friendly with collapsible sidebar
-- 🦆 **Visual Memory**: Custom emoji for each card
-- 🎨 **Modern UI**: Tailwind CSS v4 with glassmorphism
-
-### Architecture
-- **Storage**: Hybrid approach
-  - Markdown files for card content (version controlled in `/learning/cards`)
-  - MongoDB for review progress (Vercel-compatible)
-- **UI**: Two-panel layout with navigation sidebar and content display
-- **Tech**: Next.js 16.1.1, TypeScript, MongoDB, Tailwind CSS v4
-
-### Usage
-1. Add new cards as markdown files in `/learning/cards/`
-2. Use Claude Code to generate properly formatted cards
-3. Visit the app to review cards on schedule
-4. Mark cards as reviewed to update the spaced repetition schedule
-
-### Example Card
-See `/learning/cards/duck-typing.md` for the card format.
+**Golden rule:** Structure the documentation in a way that helps YOU remember and retrieve the knowledge.
 
 ---
 
@@ -224,12 +129,13 @@ See `/learning/cards/duck-typing.md` for the card format.
 ### Today I Learned (TIL)
 
 **2026-01-05**
-- Created Learning Cards app implementing spaced repetition methodology
-- Built two-panel responsive layout with Next.js 16.1.1
-- Integrated MongoDB for review progress tracking
-- Implemented markdown-based card storage for version control
-- Added syntax highlighting for code examples
-- Created first example card: Duck Typing (Python)
+- Created initial learning journal structure
+- Documented learning methodology and patterns
+- Added example concept: Duck Typing (Python)
+
+**2026-06-03**
+- Simplified project by removing `/learning` app
+- Consolidated all learning materials into CLAUDE.md
 
 ---
 
@@ -444,32 +350,27 @@ How to avoid this in the future
 
 ### Completed
 - [x] Created learning journal with Claude (2026-01-05)
-- [x] Built Learning Cards app with spaced repetition (2026-01-05)
-- [x] Implemented hybrid storage: Markdown + MongoDB (2026-01-05)
-- [x] Added responsive UI with syntax highlighting (2026-01-05)
+- [x] Simplified project structure (2026-06-03)
 
 ---
 
 ## How to Use This Journal
 
 1. **Daily Practice**: Add TIL entries regularly
-2. **Learning Cards**: Create cards for concepts using Claude Code
-3. **Review System**: Use the Learning Cards app to review on schedule
-4. **Problem Solving**: Record solutions to challenging problems
-5. **Share with Claude**: Use this as context for conversations with Claude
+2. **Document Concepts**: Add new learnings to the "Concepts & Patterns" section
+3. **Problem Solving**: Record solutions to challenging problems
+4. **Share with Claude**: Use this as context for conversations with Claude
 
 ---
 
 ## Quick Commands for Claude
 
 When working with this journal, you can ask Claude to:
-- "Create a learning card about [concept]" - Generates properly formatted card
-- "Add a new concept about [topic]" - Documents in this file
-- "Document this code snippet: [code]"
+- "Add a new concept about [topic]" - Documents in the Concepts & Patterns section
+- "Document this code snippet: [code]" - Adds to Code Snippets
 - "Help me understand [concept] and add it to the journal"
 - "Create a TIL entry for today"
 - "Review my learning goals and suggest updates"
-- "Generate a card for [algorithm/pattern/concept]" - Creates markdown card
 
 ---
 

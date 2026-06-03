@@ -2,7 +2,7 @@
 
 # Hi there, I'm Jacob 👋
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=24&pause=1000&color=2E9EF7&center=true&vCenter=true&width=600&lines=Senior+Software+Engineer+%40+Twilio;AI+%26+Full-Stack+Developer;Building+Scalable+Systems;Passionate+About+Technology)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=24&pause=1000&color=2E9EF7&center=true&vCenter=true&width=600&lines=Senior+AI+Engineer+%40+Twilio;Leading+Twilio+Agent+Connect;Open+Source+AI+Infrastructure;Building+Multi-Channel+AI+Agents)](https://git.io/typing-svg)
 
 </div>
 
@@ -10,26 +10,39 @@
 
 ## 🚀 About Me
 
-I'm a **Senior Software Engineer at Twilio**, working on cutting-edge **AI Assistants** technology. With a strong background in building scalable, production-grade systems, I'm passionate about creating innovative solutions that make a real impact.
+I'm a **Senior AI Engineer at Twilio**, leading the development of **[Twilio Agent Connect](https://www.twilio.com/docs/conversations/agent-connect)** - a model-agnostic orchestration layer that bridges AI agents with real-world communication channels. With a strong background in building scalable, production-grade systems, I'm passionate about creating innovative solutions that make a real impact.
 
-- 🔭 Currently working on **AI Assistants** at Twilio
-- 🌟 Previously built **Twilio Engage** features at Segment, including mobile push notifications and analytics
-- 💡 Experienced in full-stack development, distributed systems, and customer engagement platforms
-- 🎯 Focused on delivering high-quality, maintainable code
+- 🔭 Currently leading **[Twilio Agent Connect](https://www.twilio.com/blog/products/launches/agent-connect)** - featured at SIGNAL 2026 as a critical product launch
+- 🌟 Top contributor to open source SDKs enabling multi-channel AI agents (Voice, SMS, WhatsApp, RCS)
+- 💡 Previously built **AI Assistants** platform with RAG pipelines and **Twilio Engage** customer engagement features
+- 🎯 Focused on delivering production-grade AI infrastructure and developer tools
 
 ---
 
 ## 💼 Professional Experience
 
-### 🏢 **Senior Software Engineer** @ [Twilio](https://www.twilio.com)
-`Current`
+### 🏢 **Senior AI Engineer** @ [Twilio](https://www.twilio.com) - Conversation AI Team
+`Current - Leading Twilio Agent Connect`
 
-Building next-generation **[AI Assistants](https://www.twilio.com/docs/alpha/ai-assistants)** platform
-- 🤖 Developing conversational AI capabilities powered by large language models
-- 🏗️ Architecting scalable backend systems to handle real-time AI interactions
-- 🔌 Integrating AI/ML models into production with low-latency requirements
-- ⚡ Building APIs and SDKs for seamless integration with Twilio's communication platform
-- 🎯 Optimizing performance and reliability for enterprise-grade AI solutions
+**[Twilio Agent Connect](https://www.twilio.com/docs/conversations/agent-connect)** - Model-agnostic orchestration layer connecting AI agents to multi-channel communications
+- 🎯 **Tech Lead & Architect**: Designed and implemented the complete multi-channel, model-agnostic architecture enabling AI agents across Voice, SMS, WhatsApp, and RCS
+- 🔧 **Open Source Leadership**: Lead contributor and maintainer of:
+  - **Core TAC SDKs**: [Python](https://github.com/twilio/twilio-agent-connect-python) and [TypeScript](https://github.com/twilio/twilio-agent-connect-typescript) - Building intelligent, context-aware AI agents across languages
+  - **[AWS Integration Package](https://github.com/twilio/twilio-agent-connect-aws)** - Top contributor, simplifying AWS Bedrock, Nova, Claude, and Llama integration with Twilio
+- 🏗️ **Production Infrastructure**: Architected streaming voice capabilities with barge-in detection, timeout handling, and sub-50ms latency WebSocket optimization
+- 🤖 **AI Tools & Features**: Designed and implemented Memory Tools, Knowledge Base integration, and seamless AI-to-human handoff workflows
+- 📊 **AWS Partnership**: Led the development of [AWS connectors](https://www.twilio.com/docs/conversations/agent-connect/integrations/aws) that dramatically simplify deploying multi-channel AI agents with Amazon Bedrock Agent, AgentCore, and foundation models
+- 🚀 **Critical Launch**: Featured product at Twilio SIGNAL 2026, enabling organizations to bridge "great demo bots" to production communications
+
+### 🏢 **Senior Software Engineer** @ [Twilio](https://www.twilio.com) - Emerging Tech Innovation (ETI)
+`2023 – 2024`
+
+**[AI Assistants](https://www.twilio.com/en-us/blog/introducing-twilio-ai-assistants)** - Opinionated framework for building and hosting customer-facing AI agents
+- 🤖 **RAG & Knowledge Management**: Architected production-grade Knowledge Crawler indexing millions of URLs, websites, and files with automatic chunking and embeddings for real-time, context-aware responses
+- 🏗️ **Platform Architecture**: Designed multi-tenant Control Plane and plugin-based orchestration layer enabling Assistants to execute tool calls and integrate with external APIs
+- 💾 **Customer Memory Integration**: Built conversation history tracking with AI Perception and Personalization Engines, unified with Segment for cross-channel customer understanding
+- ⚡ **Infrastructure & Reliability**: Managed Kubernetes infrastructure and CI/CD (Buildkite) with 99.9% availability via Datadog
+- 🔒 **Security & Guardrails**: Implemented prompt injection protection, content moderation, and type-safe validation for enterprise-grade safety
 
 ### 🏢 **Software Engineer** @ [Segment (Twilio)](https://segment.com)
 `Previous Role`
@@ -55,45 +68,53 @@ Worked on **[Autopilot](https://www.brightedge.com/products/autopilot)** - an AI
 
 ## 🛠️ Tech Stack
 
+### AI & LLM Technologies
+![LangChain](https://img.shields.io/badge/LangChain-121212?style=for-the-badge&logo=chainlink&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![AWS Bedrock](https://img.shields.io/badge/AWS_Bedrock-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Anthropic](https://img.shields.io/badge/Anthropic_Claude-181818?style=for-the-badge&logo=anthropic&logoColor=white)
+![Vector DBs](https://img.shields.io/badge/Vector_DBs-00A98F?style=for-the-badge&logo=databricks&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG_Pipelines-8B5CF6?style=for-the-badge&logo=streamlit&logoColor=white)
+
 ### Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+
+### Backend & Frameworks
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
 
 ### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 
-### Backend & Frameworks
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+### AWS & Cloud
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white)
+![EKS](https://img.shields.io/badge/Amazon_EKS-FF9900?style=for-the-badge&logo=amazon-eks&logoColor=white)
+![Fargate](https://img.shields.io/badge/AWS_Fargate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-### Databases
+### Infrastructure & DevOps
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white)
+![Buildkite](https://img.shields.io/badge/Buildkite-14CC80?style=for-the-badge&logo=buildkite&logoColor=white)
+![Datadog](https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white)
+
+### Data & Messaging
+![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-
-### Cloud & DevOps
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
-
-### Tools & Technologies
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_API-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
 ---
 
@@ -155,23 +176,12 @@ Worked on **[Autopilot](https://www.brightedge.com/products/autopilot)** - an AI
 
 ## 🏆 Highlights
 
-- 💻 Building production-grade AI systems at Twilio
-- 🚀 Contributed to Twilio Engage, a platform used by thousands of companies
-- 📱 Developed mobile engagement features serving millions of users
-- 🔧 Experience with high-scale distributed systems
-- 🌟 Passionate about clean code, system design, and best practices
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-![Jacob's GitHub stats](https://github-readme-stats.vercel.app/api?username=JacobHuang91&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JacobHuang91&layout=compact&theme=tokyonight&hide_border=true)
-
-</div>
+- 🎯 **Leading Twilio Agent Connect** - Featured at SIGNAL 2026, bridging AI agents to production communications at scale
+- 🔧 **Top Open Source Contributor** - #1 contributor to Agent Connect AWS package, lead maintainer of Python & TypeScript SDKs
+- 🏗️ **Multi-Channel AI Architecture** - Designed model-agnostic orchestration supporting Voice, SMS, WhatsApp, and RCS
+- ⚡ **AWS Integration Expert** - Simplified Bedrock Agent deployment with production-ready connectors and sub-50ms latency optimization
+- 💻 **Production-Grade Systems** - Built RAG pipelines, distributed systems, and customer engagement platforms serving millions
+- 🚀 **Innovation Track Record** - From AI Assistants to Twilio Engage to Agent Connect, consistently shipping critical products
 
 ---
 
