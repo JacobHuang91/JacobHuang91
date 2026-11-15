@@ -1,8 +1,11 @@
-# One "owner/repo" per line. Lines starting with # are ignored.
-# These are repos the profile owner contributes to but does not own,
-# so they never show up in a normal contribution-graph-based stats tool.
-twilio/twilio-agent-connect-python
-twilio/twilio-agent-connect-typescript
-twilio/twilio-agent-connect-aws
-twilio/twilio-agent-connect-google
-JacobHuang91/prompt-refiner
+# One entry per line: "owner/repo role", where role is "creator" or
+# "contributor". Lines starting with # are ignored.
+#
+# These are repos the profile owner contributes to but does not own
+# (or doesn't own under this GitHub account), so they never show up in
+# a normal contribution-graph-based stats tool.
+twilio/twilio-agent-connect-python creator
+twilio/twilio-agent-connect-typescript creator
+twilio/twilio-agent-connect-aws creator
+twilio/twilio-agent-connect-google creator
+JacobHuang91/prompt-refiner creator

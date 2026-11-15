@@ -27,12 +27,16 @@ TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("ACCESS_TOKEN")
 
 
 def read_repo_list():
+    """Returns a list of (full_name, role), role being "creator" or "contributor"."""
     repos = []
     for line in REPOS_FILE.read_text().splitlines():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        repos.append(line)
+        parts = line.split()
+        full_name = parts[0]
+        role = parts[1] if len(parts) > 1 else "creator"
+        repos.append((full_name, role))
     return repos
 
 
@@ -45,7 +49,7 @@ def api_get(path):
         return json.loads(resp.read())
 
 
-def fetch_repo_stats(full_name):
+def fetch_repo_stats(full_name, role):
     info = api_get(f"/repos/{full_name}")
     return {
         "full_name": full_name,
@@ -55,27 +59,42 @@ def fetch_repo_stats(full_name):
         "forks": info.get("forks_count", 0),
         "archived": info.get("archived", False),
         "description": (info.get("description") or "").strip(),
+        "role": role,
     }
+
+
+def render_table(repos):
+    lines = [
+        "| Repository | Stars | Forks |",
+        "| --- | ---: | ---: |",
+    ]
+    for r in sorted(repos, key=lambda r: (r["archived"], -r["stars"])):
+        name = f"[{r['name']}]({r['url']})"
+        if r["archived"]:
+            name += " _(archived)_"
+        lines.append(f"| {name} | {r['stars']:,} | {r['forks']:,} |")
+    return lines
 
 
 def render_repositories(repo_stats):
     total_stars = sum(r["stars"] for r in repo_stats)
     total_forks = sum(r["forks"] for r in repo_stats)
-    ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
+    creator_repos = [r for r in repo_stats if r["role"] == "creator"]
+    contributor_repos = [r for r in repo_stats if r["role"] == "contributor"]
 
     updated = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     lines = [
         f"**{total_stars:,}** stars · **{total_forks:,}** forks · **{len(repo_stats)}** repositories "
         f"_(last updated {updated})_",
-        "",
-        "| Repository | Stars | Forks |",
-        "| --- | ---: | ---: |",
     ]
-    for r in ordered:
-        name = f"[{r['name']}]({r['url']})"
-        if r["archived"]:
-            name += " _(archived)_"
-        lines.append(f"| {name} | {r['stars']:,} | {r['forks']:,} |")
+
+    if creator_repos:
+        lines += ["", "**Created & Maintained**", ""]
+        lines += render_table(creator_repos)
+
+    if contributor_repos:
+        lines += ["", "**Contributed To**", ""]
+        lines += render_table(contributor_repos)
 
     return "\n".join(lines)
 
@@ -103,9 +122,9 @@ def main():
         sys.exit(1)
 
     repo_stats = []
-    for full_name in repos:
+    for full_name, role in repos:
         print(f"Fetching {full_name}...", file=sys.stderr)
-        repo_stats.append(fetch_repo_stats(full_name))
+        repo_stats.append(fetch_repo_stats(full_name, role))
 
     update_readme(render_repositories(repo_stats))
     print(f"Updated README.md with stats for {len(repo_stats)} repos", file=sys.stderr)
