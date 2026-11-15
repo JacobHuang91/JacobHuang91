@@ -7,13 +7,13 @@ Senior Software Engineer at Twilio, building production AI agent infrastructure.
 <!-- STATS:START -->
 **95** stars · **35** forks · **5** repositories _(last updated 2026-11-15)_
 
-| Repository | Stars | Forks |
-| --- | ---: | ---: |
-| [twilio-agent-connect-python](https://github.com/twilio/twilio-agent-connect-python) | 17 | 11 |
-| [twilio-agent-connect-typescript](https://github.com/twilio/twilio-agent-connect-typescript) | 17 | 14 |
-| [twilio-agent-connect-aws](https://github.com/twilio/twilio-agent-connect-aws) | 15 | 6 |
-| [twilio-agent-connect-google](https://github.com/twilio/twilio-agent-connect-google) | 6 | 1 |
-| [prompt-refiner](https://github.com/JacobHuang91/prompt-refiner) _(archived)_ | 40 | 3 |
+| Repository | Stars | Forks | My Commits |
+| --- | ---: | ---: | ---: |
+| [twilio-agent-connect-python](https://github.com/twilio/twilio-agent-connect-python) | 17 | 11 | 0 |
+| [twilio-agent-connect-typescript](https://github.com/twilio/twilio-agent-connect-typescript) | 17 | 14 | 1 |
+| [twilio-agent-connect-aws](https://github.com/twilio/twilio-agent-connect-aws) | 15 | 6 | 24 |
+| [twilio-agent-connect-google](https://github.com/twilio/twilio-agent-connect-google) | 6 | 1 | 29 |
+| [prompt-refiner](https://github.com/JacobHuang91/prompt-refiner) _(archived)_ | 40 | 3 | 1 |
 <!-- STATS:END -->
 
 ## Blog
