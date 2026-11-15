@@ -1,13 +1,8 @@
-# One entry per line: "owner/repo" or "owner/repo author".
-# "author" is optional and overrides which commit author to count for
-# that repo (GitHub login, or an email address if the commits there were
-# made under a different address than your main GitHub account's).
-# Lines starting with # are ignored.
-#
+# One "owner/repo" per line. Lines starting with # are ignored.
 # These are repos the profile owner contributes to but does not own,
 # so they never show up in a normal contribution-graph-based stats tool.
-twilio/twilio-agent-connect-python jahuang@twilio.com
-twilio/twilio-agent-connect-typescript jahuang@twilio.com
-twilio/twilio-agent-connect-aws jahuang@twilio.com
-twilio/twilio-agent-connect-google jahuang@twilio.com
+twilio/twilio-agent-connect-python
+twilio/twilio-agent-connect-typescript
+twilio/twilio-agent-connect-aws
+twilio/twilio-agent-connect-google
 JacobHuang91/prompt-refiner
