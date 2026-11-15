@@ -19,8 +19,6 @@ Senior Software Engineer at Twilio, building production AI agent infrastructure.
 - [Build a Voice AI Agent with OpenAI's GPT-Live, Twilio Agent Connect, and TypeScript](https://www.twilio.com/en-us/blog/developers/tutorials/integrations/tac-gpt-live-voice-ai-agent-typescript)
 - [Build Voice AI Experiences with Twilio and GPT-Live-1 in the OpenAI API](https://www.twilio.com/en-us/blog/developers/twilio-openai-gpt-live-1-api-resources)
 
-## Contributed Repo Stats
-
 ![](./generated/contributed-overview.svg)
 
 ## Connect

@@ -73,7 +73,7 @@ def render_overview(repo_stats):
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" font-family="Helvetica,Arial,sans-serif">',
         f'<rect x="0" y="0" width="{width}" height="{height}" rx="8" fill="#ffffff" stroke="#e1e4e8"/>',
-        f'<text x="20" y="30" font-size="16" font-weight="bold" fill="#0969da">Contributed Project Stats</text>',
+        f'<text x="20" y="30" font-size="16" font-weight="bold" fill="#0969da">Contributed Repo Stats</text>',
     ]
 
     y = header_height
@@ -86,9 +86,10 @@ def render_overview(repo_stats):
 
     y += 6
     lines.append(f'<line x1="20" y1="{y - 14}" x2="{width - 20}" y2="{y - 14}" stroke="#e1e4e8"/>')
-    lines.append(f'<text x="20" y="{y}" font-size="12" font-weight="bold" fill="#57606a">Per-repository</text>')
+    lines.append(f'<text x="20" y="{y}" font-size="12" font-weight="bold" fill="#57606a">Repository</text>')
     y += row_height
-    for r in sorted(repo_stats, key=lambda r: r["stars"], reverse=True):
+    ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
+    for r in ordered:
         name = esc(r["full_name"])
         if r["archived"]:
             name += ' <tspan fill="#999999" font-style="italic">(archived)</tspan>'
