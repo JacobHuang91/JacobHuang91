@@ -1,0 +1,17 @@
+name: GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # every day at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    name: Update GitHub stats
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate stats images
+        uses: jstrieb/github-stats@master
+        with:
+          username: JacobHuang91
+          access_token: ${{ secrets.ACCESS_TOKEN }}
