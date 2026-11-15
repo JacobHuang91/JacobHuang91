@@ -58,17 +58,21 @@ def fetch_repo_stats(full_name):
 
 
 def render_repositories(repo_stats):
+    total_stars = sum(r["stars"] for r in repo_stats)
+    total_forks = sum(r["forks"] for r in repo_stats)
     ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
 
     lines = [
-        "| Repository | Stars |",
-        "| --- | ---: |",
+        f"**{total_stars:,}** stars · **{total_forks:,}** forks · **{len(repo_stats)}** repositories",
+        "",
+        "| Repository | Stars | Forks |",
+        "| --- | ---: | ---: |",
     ]
     for r in ordered:
         name = f"[{r['name']}]({r['url']})"
         if r["archived"]:
             name += " _(archived)_"
-        lines.append(f"| {name} | {r['stars']:,} |")
+        lines.append(f"| {name} | {r['stars']:,} | {r['forks']:,} |")
 
     return "\n".join(lines)
 
