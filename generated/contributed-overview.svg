@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="262" viewBox="0 0 480 262" font-family="Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="480" height="262" rx="8" fill="#ffffff" stroke="#e1e4e8"/>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#0969da">Contributed Project Stats</text>
+<text x="20" y="50" font-size="13" fill="#24292f">Stars</text>
+<text x="460" y="50" font-size="13" fill="#24292f" text-anchor="end">55</text>
+<text x="20" y="74" font-size="13" fill="#24292f">Forks</text>
+<text x="460" y="74" font-size="13" fill="#24292f" text-anchor="end">32</text>
+<text x="20" y="98" font-size="13" fill="#24292f">Repositories</text>
+<text x="460" y="98" font-size="13" fill="#24292f" text-anchor="end">4</text>
+<line x1="20" y1="114" x2="460" y2="114" stroke="#e1e4e8"/>
+<text x="20" y="128" font-size="12" font-weight="bold" fill="#57606a">Per-repository</text>
+<text x="20" y="152" font-size="12" fill="#24292f">twilio/twilio-agent-connect-python</text>
+<text x="460" y="152" font-size="12" fill="#24292f" text-anchor="end">★ 17</text>
+<text x="20" y="176" font-size="12" fill="#24292f">twilio/twilio-agent-connect-typescript</text>
+<text x="460" y="176" font-size="12" fill="#24292f" text-anchor="end">★ 17</text>
+<text x="20" y="200" font-size="12" fill="#24292f">twilio/twilio-agent-connect-aws</text>
+<text x="460" y="200" font-size="12" fill="#24292f" text-anchor="end">★ 15</text>
+<text x="20" y="224" font-size="12" fill="#24292f">twilio/twilio-agent-connect-google</text>
+<text x="460" y="224" font-size="12" fill="#24292f" text-anchor="end">★ 6</text>
+</svg>

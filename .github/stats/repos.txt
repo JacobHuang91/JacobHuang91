@@ -1,0 +1,7 @@
+# One "owner/repo" per line. Lines starting with # are ignored.
+# These are repos the profile owner contributes to but does not own,
+# so they never show up in a normal contribution-graph-based stats tool.
+twilio/twilio-agent-connect-python
+twilio/twilio-agent-connect-typescript
+twilio/twilio-agent-connect-aws
+twilio/twilio-agent-connect-google

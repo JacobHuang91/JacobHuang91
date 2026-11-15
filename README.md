@@ -19,10 +19,12 @@ Senior Software Engineer at Twilio, building production AI agent infrastructure.
 - [Build a Voice AI Agent with OpenAI's GPT-Live, Twilio Agent Connect, and TypeScript](https://www.twilio.com/en-us/blog/developers/tutorials/integrations/tac-gpt-live-voice-ai-agent-typescript)
 - [Build Voice AI Experiences with Twilio and GPT-Live-1 in the OpenAI API](https://www.twilio.com/en-us/blog/developers/twilio-openai-gpt-live-1-api-resources)
 
-## GitHub Stats
+## Contributed Repo Stats
 
-![](./generated/overview.svg)
-![](./generated/languages.svg)
+Stats for repos I contribute to but don't own (e.g. under `twilio/`), tracked explicitly in [.github/stats/repos.txt](.github/stats/repos.txt).
+
+![](./generated/contributed-overview.svg)
+![](./generated/contributed-languages.svg)
 
 ## Connect
 
