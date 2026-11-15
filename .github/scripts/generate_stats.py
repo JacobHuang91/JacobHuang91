@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate SVG stats cards for a hand-picked list of repos.
+"""Update README.md with a stats table for a hand-picked list of repos.
 
 Unlike contribution-graph-based tools, this reads an explicit list of
 "owner/repo" entries (see .github/stats/repos.txt), so it also works for
@@ -9,13 +9,17 @@ a different GitHub account.
 
 import json
 import os
+import re
 import sys
 import urllib.request
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REPOS_FILE = REPO_ROOT / ".github" / "stats" / "repos.txt"
-OUT_DIR = REPO_ROOT / "generated"
+README_FILE = REPO_ROOT / "README.md"
+
+START_MARKER = "<!-- STATS:START -->"
+END_MARKER = "<!-- STATS:END -->"
 
 API_BASE = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("ACCESS_TOKEN")
@@ -51,57 +55,41 @@ def fetch_repo_stats(full_name):
     }
 
 
-def esc(text):
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-    )
-
-
-def render_overview(repo_stats):
+def render_table(repo_stats):
     total_stars = sum(r["stars"] for r in repo_stats)
     total_forks = sum(r["forks"] for r in repo_stats)
-    row_height = 24
-    header_height = 50
-    rows = [("Stars", total_stars), ("Forks", total_forks), ("Repositories", len(repo_stats))]
-    height = header_height + row_height * (len(rows) + 1 + len(repo_stats)) + 20
-    width = 480
+
+    ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
 
     lines = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-        f'viewBox="0 0 {width} {height}" font-family="Helvetica,Arial,sans-serif">',
-        f'<rect x="0" y="0" width="{width}" height="{height}" rx="8" fill="#ffffff" stroke="#e1e4e8"/>',
-        f'<text x="20" y="30" font-size="16" font-weight="bold" fill="#0969da">Contributed Repo Stats</text>',
+        f"**{total_stars:,}** stars · **{total_forks:,}** forks · **{len(repo_stats)}** repositories",
+        "",
+        "| Repository | Stars | Forks |",
+        "| --- | ---: | ---: |",
     ]
-
-    y = header_height
-    for label, value in rows:
-        lines.append(f'<text x="20" y="{y}" font-size="13" fill="#24292f">{esc(label)}</text>')
-        lines.append(
-            f'<text x="{width - 20}" y="{y}" font-size="13" fill="#24292f" text-anchor="end">{value:,}</text>'
-        )
-        y += row_height
-
-    y += 6
-    lines.append(f'<line x1="20" y1="{y - 14}" x2="{width - 20}" y2="{y - 14}" stroke="#e1e4e8"/>')
-    lines.append(f'<text x="20" y="{y}" font-size="12" font-weight="bold" fill="#57606a">Repository</text>')
-    y += row_height
-    ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
     for r in ordered:
-        name = esc(r["full_name"])
+        name = f"[{r['full_name']}]({r['url']})"
         if r["archived"]:
-            name += ' <tspan fill="#999999" font-style="italic">(archived)</tspan>'
-        lines.append(f'<text x="20" y="{y}" font-size="12" fill="#24292f">{name}</text>')
-        lines.append(
-            f'<text x="{width - 20}" y="{y}" font-size="12" fill="#24292f" text-anchor="end">'
-            f'★ {r["stars"]:,}</text>'
-        )
-        y += row_height
+            name += " _(archived)_"
+        lines.append(f"| {name} | {r['stars']:,} | {r['forks']:,} |")
 
-    lines.append("</svg>")
     return "\n".join(lines)
+
+
+def update_readme(table_markdown):
+    content = README_FILE.read_text()
+    if START_MARKER not in content or END_MARKER not in content:
+        print(
+            f"README.md is missing {START_MARKER} / {END_MARKER} markers",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    pattern = re.compile(
+        re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER), re.DOTALL
+    )
+    replacement = f"{START_MARKER}\n{table_markdown}\n{END_MARKER}"
+    README_FILE.write_text(pattern.sub(replacement, content))
 
 
 def main():
@@ -115,9 +103,8 @@ def main():
         print(f"Fetching {full_name}...", file=sys.stderr)
         repo_stats.append(fetch_repo_stats(full_name))
 
-    OUT_DIR.mkdir(exist_ok=True)
-    (OUT_DIR / "contributed-overview.svg").write_text(render_overview(repo_stats))
-    print(f"Wrote stats for {len(repo_stats)} repos to {OUT_DIR}", file=sys.stderr)
+    update_readme(render_table(repo_stats))
+    print(f"Updated README.md with stats for {len(repo_stats)} repos", file=sys.stderr)
 
 
 if __name__ == "__main__":
