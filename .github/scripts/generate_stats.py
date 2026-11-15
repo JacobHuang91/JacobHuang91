@@ -57,24 +57,18 @@ def fetch_repo_stats(full_name):
     }
 
 
-def render_list(repos):
-    lines = []
-    for r in sorted(repos, key=lambda r: -r["stars"]):
-        entry = f"- [{r['name']}]({r['url']}) (★ {r['stars']:,})"
-        if r["description"]:
-            entry += f": {r['description']}"
-        lines.append(entry)
-    return lines
-
-
 def render_repositories(repo_stats):
-    active = [r for r in repo_stats if not r["archived"]]
-    archived = [r for r in repo_stats if r["archived"]]
+    ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
 
-    lines = render_list(active)
-    if archived:
-        lines += ["", "### Archived", ""]
-        lines += render_list(archived)
+    lines = [
+        "| Repository | Stars |",
+        "| --- | ---: |",
+    ]
+    for r in ordered:
+        name = f"[{r['name']}]({r['url']})"
+        if r["archived"]:
+            name += " _(archived)_"
+        lines.append(f"| {name} | {r['stars']:,} |")
 
     return "\n".join(lines)
 
