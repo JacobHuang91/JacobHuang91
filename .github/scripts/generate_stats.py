@@ -48,30 +48,33 @@ def fetch_repo_stats(full_name):
     info = api_get(f"/repos/{full_name}")
     return {
         "full_name": full_name,
+        "name": info.get("name", full_name.split("/")[-1]),
         "url": info.get("html_url", f"https://github.com/{full_name}"),
         "stars": info.get("stargazers_count", 0),
         "forks": info.get("forks_count", 0),
         "archived": info.get("archived", False),
+        "description": (info.get("description") or "").strip(),
     }
 
 
-def render_table(repo_stats):
-    total_stars = sum(r["stars"] for r in repo_stats)
-    total_forks = sum(r["forks"] for r in repo_stats)
+def render_list(repos):
+    lines = []
+    for r in sorted(repos, key=lambda r: -r["stars"]):
+        entry = f"- [{r['name']}]({r['url']}) (★ {r['stars']:,})"
+        if r["description"]:
+            entry += f": {r['description']}"
+        lines.append(entry)
+    return lines
 
-    ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
 
-    lines = [
-        f"**{total_stars:,}** stars · **{total_forks:,}** forks · **{len(repo_stats)}** repositories",
-        "",
-        "| Repository | Stars | Forks |",
-        "| --- | ---: | ---: |",
-    ]
-    for r in ordered:
-        name = f"[{r['full_name']}]({r['url']})"
-        if r["archived"]:
-            name += " _(archived)_"
-        lines.append(f"| {name} | {r['stars']:,} | {r['forks']:,} |")
+def render_repositories(repo_stats):
+    active = [r for r in repo_stats if not r["archived"]]
+    archived = [r for r in repo_stats if r["archived"]]
+
+    lines = render_list(active)
+    if archived:
+        lines += ["", "### Archived", ""]
+        lines += render_list(archived)
 
     return "\n".join(lines)
 
@@ -103,7 +106,7 @@ def main():
         print(f"Fetching {full_name}...", file=sys.stderr)
         repo_stats.append(fetch_repo_stats(full_name))
 
-    update_readme(render_table(repo_stats))
+    update_readme(render_repositories(repo_stats))
     print(f"Updated README.md with stats for {len(repo_stats)} repos", file=sys.stderr)
 
 
