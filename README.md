@@ -21,8 +21,6 @@ Senior Software Engineer at Twilio, building production AI agent infrastructure.
 
 ## Contributed Repo Stats
 
-Stats for repos I contribute to but don't own (e.g. under `twilio/`), tracked explicitly in [.github/stats/repos.txt](.github/stats/repos.txt).
-
 ![](./generated/contributed-overview.svg)
 
 ## Connect
