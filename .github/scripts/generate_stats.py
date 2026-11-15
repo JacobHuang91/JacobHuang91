@@ -12,6 +12,7 @@ import os
 import re
 import sys
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -62,8 +63,10 @@ def render_repositories(repo_stats):
     total_forks = sum(r["forks"] for r in repo_stats)
     ordered = sorted(repo_stats, key=lambda r: (r["archived"], -r["stars"]))
 
+    updated = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     lines = [
-        f"**{total_stars:,}** stars · **{total_forks:,}** forks · **{len(repo_stats)}** repositories",
+        f"**{total_stars:,}** stars · **{total_forks:,}** forks · **{len(repo_stats)}** repositories "
+        f"_(last updated {updated})_",
         "",
         "| Repository | Stars | Forks |",
         "| --- | ---: | ---: |",
