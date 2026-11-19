@@ -5,7 +5,7 @@ Senior Software Engineer at Twilio, building production AI agent infrastructure.
 ## Repositories
 
 <!-- STATS:START -->
-**95** stars · **35** forks · **5** repositories _(last updated 2026-11-18)_
+**95** stars · **35** forks · **5** repositories _(last updated 2026-11-19)_
 
 **Created & Maintained**
 
